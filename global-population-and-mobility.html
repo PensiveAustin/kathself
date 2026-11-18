@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>A World of Ideas and Global Mobility Exam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#f3f1ec;--card:#fff;--tx:#1f2421;--mu:#6b716d;--ac:#2f6b5a;--ac2:#4f9a83;--acs:#e3f1ec;--bd:#dcd8cf;--ok:#17703f;--no:#b3261e;--okb:#e4f5ea;--nob:#fcebe9;--sh:0 10px 30px rgba(30,40,35,.10);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121514;--card:#1c201e;--tx:#ecebe5;--mu:#9aa09b;--ac:#7fc4ad;--ac2:#5aa890;--acs:#233630;--bd:#323836;--ok:#72d79d;--no:#ff938a;--okb:#16301f;--nob:#3a1e1b;--sh:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121514;--card:#1c201e;--tx:#ecebe5;--mu:#9aa09b;--ac:#7fc4ad;--ac2:#5aa890;--acs:#233630;--bd:#323836;--ok:#72d79d;--no:#ff938a;--okb:#16301f;--nob:#3a1e1b;--sh:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:22px 16px 48px}
+.top{text-align:center;margin-bottom:18px}
+.top h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}
+.top span{color:var(--mu);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;box-shadow:var(--sh);padding:24px 22px;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.bar{height:8px;background:var(--bd);border-radius:99px;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:99px;transition:width .3s}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:var(--mu);margin-bottom:14px}
+.tag{background:var(--acs);color:var(--ac);font-weight:600;padding:3px 10px;border-radius:99px}
+.qt{font-size:1.2rem;font-weight:650;line-height:1.4;margin:0 0 18px}
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;font:inherit;color:inherit;background:var(--bg);border:2px solid var(--bd);border-radius:12px;padding:13px 14px;margin-bottom:10px;cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--ac2)}
+.opt b{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--bd);font-size:.8rem}
+.opt.sel{border-color:var(--ac);background:var(--acs)}
+.opt.sel b{background:var(--ac);border-color:var(--ac);color:var(--card)}
+input[type=text]{width:100%;font:inherit;font-size:1.05rem;padding:14px;border:2px solid var(--bd);border-radius:12px;background:var(--bg);color:var(--tx);outline:0}
+input[type=text]:focus{border-color:var(--ac)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+.btn{font:inherit;font-weight:650;padding:12px 24px;border-radius:12px;border:2px solid var(--ac);background:var(--ac);color:var(--card);cursor:pointer;transition:.15s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ac)}
+.btn[disabled]{opacity:.35;cursor:default}
+.score{text-align:center}
+.big{font-size:3.4rem;font-weight:800;color:var(--ac);line-height:1}
+.score p{color:var(--mu);margin:.4em 0 1.2em}
+.rv{border:1px solid var(--bd);border-left:5px solid var(--no);background:var(--nob);border-radius:10px;padding:10px 14px;margin:10px 0;text-align:left;font-size:.93rem}
+.rv.g{border-left-color:var(--ok);background:var(--okb)}
+.rv small{display:block;color:var(--mu)}
+.rv em{font-style:normal;font-weight:650}
+@media(max-width:480px){.card{padding:18px 14px}.qt{font-size:1.08rem}}
+.home{display:inline-block;margin-bottom:10px;color:var(--ac);text-decoration:none;font-weight:600;font-size:.9rem}.home:hover{text-decoration:underline}
+</style></head><body><div class="wrap">
+<div class="top"><a class="home" href="index.html">← Back to all exams</a><h1>A World of Ideas &amp; Global Population and Mobility</h1><span>30 Multiple Choice + 10 Identification · 40 points</span></div>
+<div class="card" id="app"></div></div>
+<script>
+// For MCQ: first option is the correct answer (options get shuffled on screen).
+const MC=[
+["The ways media content is produced, distributed, and consumed globally are called:",["Global media cultures", "Global migration", "Global demography", "Global city"]],
+["Which concept shows that a small number of companies and countries shape much of the world's news and entertainment?",["Media imperialism", "Cultural hybridization", "Religious syncretism", "Redlining"]],
+["Which medium provides information about current events, politics, and the economy?",["News", "Entertainment", "Social", "Educational"]],
+["Which medium consists of platforms that allow users to create, share, and interact with content?",["Social", "News", "Entertainment", "Educational"]],
+["Which is a format of Educational media?",["Online courses", "TikTok", "Discord", "Films / Movies"]],
+["Which news organizations have a global reach that influences public opinion worldwide?",["BBC, CNN, and Al Jazeera", "Coursera, edX, and Khan Academy", "Marvel and Star Wars", "Facebook and Instagram"]],
+["Which term describes dominant cultural products overshadowing local industries?",["Cultural homogenization", "Cultural hybridization", "Echo chambers", "Media literacy"]],
+["Algorithms that curate content based on user preferences can reinforce:",["Echo chambers and polarization", "Remittances", "Brain drain", "Urban sprawl"]],
+["#EndSARS is a movement that took place in:",["Nigeria", "Myanmar", "The Philippines", "Brazil"]],
+["The Rohingya crisis took place in:",["Myanmar", "Nigeria", "The Philippines", "Indonesia"]],
+["Which movement used social media to highlight police brutality and systemic racism?",["Black Lives Matter", "#MeToo", "#EndSARS", "Arab Spring"]],
+["The #MeToo movement brought attention to:",["Sexual harassment and assault", "Police brutality", "Climate change", "Brain drain"]],
+["The blending of different religious traditions into new forms is called:",["Religious syncretism", "Interfaith dialogue", "Religious politics", "Cultural diversity"]],
+["Which promotes dialogue and understanding between different religious groups?",["Interfaith dialogue", "Religious politics", "Religious syncretism", "Redlining"]],
+["Which is a challenge of the globalization of religion?",["Identity tensions and the spread of extremist ideologies", "Increased remittances", "Urban heat island effect", "Brain drain"]],
+["Another name for a global city is a:",["World city", "Mega-city", "Sending country", "Expatriate city"]],
+["Which city is the business hub of Metro Manila, home to BPO companies and telecommunications?",["Makati City", "Manila", "Quezon City", "Taguig City"]],
+["Which is the largest area within Metro Manila?",["Quezon City", "Manila", "Makati City", "Taguig City"]],
+["Which is the most commonly cited reason for social inequality in global cities?",["Redlining", "Urban sprawl", "Brain drain", "Remittances"]],
+["Urban areas being warmer than surrounding rural areas is called the:",["Urban heat island effect", "Greenhouse gases", "Sea level rise", "Water stress"]],
+["Development of parks, green roofs, and sustainable buildings is called:",["Green infrastructure", "Resilience planning", "Carbon reduction", "Urbanization"]],
+["The statistical study of human populations, including their size, distribution, and trends, is:",["Global demography", "Global migration", "Global city", "Urbanization"]],
+["The global population growth rate is estimated to be around:",["1.1% per year", "5% per year", "0.1% per year", "3.5% per year"]],
+["The global population is expected to reach about how many by 2050?",["9.7 billion", "5.2 billion", "12 billion", "7.1 billion"]],
+["Which region has the highest population growth rate?",["Sub-Saharan Africa", "Europe", "East Asia", "North America"]],
+["Which type of migration is driven by better job opportunities and higher wages?",["Labor", "Asylum", "Environmental", "Family reunification"]],
+["Which type of migration is protected under international refugee law?",["Asylum", "Labor", "Family reunification", "Unauthorized"]],
+["Filipinos who migrate mainly for labor are called:",["Overseas Filipino Workers (OFWs)", "Foreign expatriates", "Asylum seekers", "Environmental migrants"]],
+["The loss of skilled labor in a sending country is called:",["Brain drain", "Remittances", "Hybridization", "Redlining"]],
+["The Global Compact for Migration aims to:",["Manage migration safely, orderly, and regularly", "Stop all migration", "Open all borders", "Increase tourism"]],
+];
+const ID=[
+["The ways in which media content is produced, distributed, and consumed globally.",["global media cultures", "global media culture"]],
+["The movement that used social media to highlight police brutality and systemic racism.",["black lives matter", "blm"]],
+["The blending of different religious traditions into new forms of spiritual expression.",["religious syncretism", "syncretism"]],
+["The most commonly cited reason for social inequality in global cities.",["redlining"]],
+["Urban areas having higher temperatures than surrounding rural areas.",["urban heat island effect", "urban heat island"]],
+["The statistical study of human populations: their size, distribution, and trends.",["global demography", "demography"]],
+["The largest area found within Metro Manila.",["quezon city", "quezon"]],
+["Type of migration where people flee persecution, conflict, or violence and seek refuge in other countries.",["asylum"]],
+["The loss of skilled labor from a sending country.",["brain drain"]],
+["Money sent home by migrants that can boost local economies.",["remittances", "remittance"]],
+];
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const N=MC.length+ID.length;
+const T=['Global Media Cultures','Racial Inequality and Social Injustice','The Globalization of Religions','The Global City','Climate Change in Global Cities','Global Demography','Global Migration'];
+const TM=[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 0, 1, 2, 3, 4, 5, 3, 6, 6, 6];
+const topic=i=>T[TM[i]];
+let cur=0,ans=[],opts=[];
+const app=document.getElementById('app');
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+function start(){cur=0;ans=Array(N).fill('');opts=MC.map(q=>sh(q[1]));render()}
+function render(){
+ const mc=cur<MC.length,q=mc?MC[cur]:ID[cur-MC.length];
+ let h=`<div class="bar"><i style="width:${cur/N*100}%"></i></div><div class="meta"><span class="tag">${topic(cur)}</span><span>${mc?'Multiple Choice':'Identification'} · ${cur+1} of ${N}</span></div><p class="qt">${q[0]}</p>`;
+ if(mc)h+=opts[cur].map((o,k)=>`<button class="opt${ans[cur]===o?' sel':''}" data-v="${esc(o)}"><b>${'ABCD'[k]}</b><span>${o}</span></button>`).join('');
+ else h+=`<input type="text" id="t" autocomplete="off" placeholder="Type your answer here" value="${esc(ans[cur])}">`;
+ h+=`<div class="nav"><button class="btn ghost" id="pv" ${cur?'':'disabled'}>← Previous</button><button class="btn" id="nx">${cur==N-1?'Finish ✓':'Next →'}</button></div>`;
+ app.innerHTML=h;
+ app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ans[cur]=b.dataset.v;render()});
+ const t=document.getElementById('t');
+ if(t){t.oninput=()=>ans[cur]=t.value;t.onkeydown=e=>{if(e.key==='Enter')go(1)};t.focus()}
+ document.getElementById('pv').onclick=()=>go(-1);
+ document.getElementById('nx').onclick=()=>go(1);
+}
+function go(d){
+ if(d>0&&cur==N-1){const un=ans.filter(a=>!String(a).trim()).length;if(un&&!confirm(un+' question(s) unanswered. Submit anyway?'))return;return finish()}
+ cur+=d;render();window.scrollTo(0,0)
+}
+function finish(){
+ let s1=0,s2=0,rv='';
+ MC.forEach((q,i)=>{const ok=ans[i]===q[1][0];if(ok)s1++;else rv+=`<div class="rv"><b>${i+1}. ${q[0]}</b><small>Your answer: ${ans[i]?esc(ans[i]):'(none)'}</small><em>Correct: ${q[1][0]}</em></div>`});
+ ID.forEach((q,i)=>{const n=MC.length+i,v=String(ans[n]).trim().toLowerCase().replace(/\s+/g,' '),ok=q[1].includes(v);if(ok)s2++;else rv+=`<div class="rv"><b>${n+1}. ${q[0]}</b><small>Your answer: ${v?esc(ans[n]):'(none)'}</small><em>Correct: ${q[1][0]}</em></div>`});
+ const t=s1+s2;
+ app.innerHTML=`<div class="score"><div class="big">${t}/${N}</div><p>${Math.round(t/N*100)}% · Multiple choice ${s1}/30 · Identification ${s2}/10</p><button class="btn" id="rt">Retake exam</button> <a class="btn ghost" href="index.html" style="text-decoration:none;display:inline-block">Home</a></div><h3 style="margin:24px 0 4px">${t==N?'Perfect score! 🎉':'Items to review'}</h3>${rv}`;
+ document.getElementById('rt').onclick=()=>{start();window.scrollTo(0,0)};
+ window.scrollTo(0,0);
+}
+start();
+</script></body></html>
